@@ -1,8 +1,8 @@
 {
   "name": "react-gtm-module",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "description": "React Google Tag Manager Module",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint .",
     "jest": "jest",
