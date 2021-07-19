@@ -10,6 +10,7 @@ var TagManager = {
   dataScript: function dataScript(dataLayer) {
     var script = document.createElement('script');
     script.innerHTML = dataLayer;
+    script.defer = true;
     return script;
   },
   gtm: function gtm(args) {
@@ -24,6 +25,7 @@ var TagManager = {
     var script = function script() {
       var script = document.createElement('script');
       script.innerHTML = snippets.script;
+      script.defer = true;
       return script;
     };
 

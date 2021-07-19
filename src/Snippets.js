@@ -7,6 +7,7 @@ const Snippets = {
     const gtm_auth = `&gtm_auth=${auth}`
     const gtm_preview = `&gtm_preview=${preview}`
     const gtm_src = src
+
     if (!id) warn('GTM Id is required')
 
     const iframe = `
@@ -17,7 +18,7 @@ const Snippets = {
       (function(w,d,s,l,i){w[l]=w[l]||[];
         w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js', ${JSON.stringify(events).slice(1, -1)}});
         var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-        j.async=true;j.src='${gtm_src}/gtm.js?id='+i+dl+'${gtm_auth}${gtm_preview}&gtm_cookies_win=x';
+        j.defer=true;j.src='${gtm_src}/gtm.js?id='+i+dl+'${gtm_auth}${gtm_preview}&gtm_cookies_win=x';
         f.parentNode.insertBefore(j,f);
       })(window,document,'script','${dataLayerName}','${id}');`
 

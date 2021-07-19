@@ -4,6 +4,7 @@ const TagManager = {
   dataScript: function (dataLayer) {
     const script = document.createElement('script')
     script.innerHTML = dataLayer
+    script.defer = true
     return script
   },
   gtm: function (args) {
@@ -18,6 +19,7 @@ const TagManager = {
     const script = () => {
       const script = document.createElement('script')
       script.innerHTML = snippets.script
+      script.defer = true
       return script
     }
 
